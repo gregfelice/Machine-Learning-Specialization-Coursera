@@ -1,9 +1,9 @@
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.activations import relu,linear
-from tensorflow.keras.losses import SparseCategoricalCrossentropy
-from tensorflow.keras.optimizers import Adam
+from keras import Sequential
+from keras import Dense
+from keras import relu,linear
+from keras import SparseCategoricalCrossentropy
+from keras import Adam
 
 import numpy as np
 

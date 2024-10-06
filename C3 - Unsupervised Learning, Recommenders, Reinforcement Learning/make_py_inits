@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Find all .py and .ipynb files recursively below the current directory
+find . -type f \( -name "*.py" -o -name "*.ipynb" \) -print0 | while IFS= read -r -d '' file; do
+
+  # Get the directory of the found file
+  directory=$(dirname "$file")
+
+  # Check if __init__.py already exists in the directory
+  if [ ! -f "$directory/__init__.py" ]; then
+    # Create __init__.py
+    touch "$directory/__init__.py"
+    echo "Created __init__.py in $directory"
+  fi
+done
