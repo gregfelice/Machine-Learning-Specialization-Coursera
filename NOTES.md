@@ -68,17 +68,17 @@ $$\frac{\partial J(w,b)}{\partial b} = \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{
 ### Logistic Regression Model & Decision Boundary
 
 For logistic regression, the model is represented as:
-$$
-f_{w,b} = g(w \cdot x^{(i)} + b)
-$$
+
+$$f_{w,b} = g(w \cdot x^{(i)} + b)$$
+
 where $g(z)$ is known as the signmoid function and it maps all input values to values between 0 and 1:
-$$
-g(z) = \frac {1}{1+e^{-z}}
-$$
-and $w \cdot x$ is the vector dot product:
-$$
-w \cdot x = w_0x_0+w_1x_1
-$$
+
+$$g(z) = \frac {1}{1+e^{-z}}$$
+
+and $$w \cdot x$$ is the vector dot product:
+
+$$w \cdot x = w_0x_0+w_1x_1$$
+
 We interperet the output of the model $(f_w,b(x))$ as the probability that y=1 given x and parameterized by w and b.
 
 * Therefore, to get a final prediction (y = 0 or y = 1) from the logistic regression model, we can use the following heuristic: 
