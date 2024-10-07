@@ -39,12 +39,12 @@ where, parameters $𝑤, 𝑏$ are updated simultaneously.
 
 The equation for the cost function with multiple variables $J(w,b)$ is:
 
-$$J(w,b)=\frac {1}{2m}\sum^{m-1}_{i=0}(f_{w,b}(x^{(i)})-y^{(i)})^2$$
+$$J(w,b) = \frac{1}{2m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2$$
 
 where:
 $$f_{w,b} (x^{(i)}) = w \cdot x^{(i)}+b$$
 
-In contrast to previous labs, $𝐰 and 𝐱(𝑖)$ are vectors rather than scalars supporting multiple features.
+In contrast to previous labs, $𝐰$ and $𝐱(𝑖)$ are vectors rather than scalars supporting multiple features.
 
 ### Gradient Descent With Multiple Variables
 
@@ -52,28 +52,15 @@ Gradient descent for multiple variables:
 
 repeat until convergence: {
 $$for\space j=0..n-1$$
-$$
-w_j=w_j-{\alpha}
-\frac{\partial J(w,b)}{\partial w_j}
-$$
-$$
-b=b-{\alpha}
-\frac{\partial J(w,b)}{\partial b}
-$$
+
+$$w_j = w_j - \alpha \frac{\partial J(w,b)}{\partial w_j}$$
+$$b = b - \alpha \frac{\partial J(w,b)}{\partial b}$$
 }
 where, n is the number of features, parameters $w_j, b$ aer updated simultaneously and where
-$$
-\frac{\partial J(w,b)}{\partial w_j} = 
-\frac {1}{m}
-\sum^{m-1}_{i=0}
-(f_{w,b}(x^{(i)})-y^{(i)})x^{(i)}_{j}
-$$
-$$
-\frac{\partial J(w,b)}{\partial b} = 
-\frac {1}{m}
-\sum^{m-1}_{i=0}
-(f_{w,b}(x^{(i)})-y^{(i)})
-$$
+
+$$\frac{\partial J(w,b)}{\partial w_j} = \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) x^{(i)}_{j}$$
+$$\frac{\partial J(w,b)}{\partial b} = \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})$$  
+
 * m is the number of training examples in the data set
 * $f_{f,w}(x^{(i)})$ is the model's prediction, with $y^{(i)}$ is the target value
 
