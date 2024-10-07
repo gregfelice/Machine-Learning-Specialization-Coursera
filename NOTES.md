@@ -13,7 +13,14 @@ $w,b$
 
 **Cost Function**
 * Squared error cost function
-$$J(w,b)=\frac{1}{2m}\sum^{m}_{i=1}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$$
+xxx
+
+$J(w,b)=\frac{1}{2m}\sum^{m}_{i=1}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$
+
+yyy
+
+$$J(w,b) = \frac{1}{2m} \sum_{i=1}^{m} (f_{w,b}(x^{(i)}) - y^{(i)})^2$$
+
 where
 * $f_{w,b}(x^{(i)})$ is our prediction for example $i$ using parameters $w,b$
 * $(f_{w,b}(x^{(i)})-y^{(i)})^2$ is the squared difference between the target value and the prediction.
