@@ -21,6 +21,7 @@ where
 * These differences are summed over all the $m$ examples and divided by $2m$ to produce the cost, $J(w,b)$.
 
 **Objective**
+
 $$\underset{w,b}{\text{minimize}\space} J(w,b)$$
 
 ### Gradient Descent
@@ -28,14 +29,8 @@ $$\underset{w,b}{\text{minimize}\space} J(w,b)$$
 Gradient descent can be described as:
 
 repeat until convergence: {
-$$
-w=w-{\alpha}
-\frac{\partial J(w,b)}{\partial w}
-$$
-$$
-b=b-{\alpha}
-\frac{\partial J(w,b)}{\partial b}
-$$
+$$w=w-{\alpha}\frac{\partial J(w,b)}{\partial w}$$
+$$b=b-{\alpha}\frac{\partial J(w,b)}{\partial b}$$
 }
 
 where, parameters 𝑤, 𝑏 are updated simultaneously.
