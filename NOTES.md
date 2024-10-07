@@ -39,19 +39,12 @@ where, parameters $𝑤, 𝑏$ are updated simultaneously.
 
 The equation for the cost function with multiple variables $J(w,b)$ is:
 
-$$
-J(w,b)=
-\frac {1}{2m}
-\sum^{m-1}_{i=0}
-(f_{w,b}(x^{(i)})-y^{(i)})^2
-$$
+$$J(w,b)=\frac {1}{2m}\sum^{m-1}_{i=0}(f_{w,b}(x^{(i)})-y^{(i)})^2$$
 
 where:
-$$
-f_{w,b} (x^{(i)}) = w \cdot x^{(i)}+b
-$$
+$$f_{w,b} (x^{(i)}) = w \cdot x^{(i)}+b$$
 
-In contrast to previous labs, 𝐰 and 𝐱(𝑖) are vectors rather than scalars supporting multiple features.
+In contrast to previous labs, $𝐰 and 𝐱(𝑖)$ are vectors rather than scalars supporting multiple features.
 
 ### Gradient Descent With Multiple Variables
 
