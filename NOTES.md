@@ -59,6 +59,7 @@ $$b = b - \alpha \frac{\partial J(w,b)}{\partial b}$$
 where, n is the number of features, parameters $w_j, b$ aer updated simultaneously and where
 
 $$\frac{\partial J(w,b)}{\partial w_j} = \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) x^{(i)}_{j}$$
+
 $$\frac{\partial J(w,b)}{\partial b} = \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})$$  
 
 * m is the number of training examples in the data set
