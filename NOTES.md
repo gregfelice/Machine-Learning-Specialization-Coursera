@@ -13,12 +13,6 @@ $w,b$
 
 **Cost Function**
 * Squared error cost function
-xxx
-
-$J(w,b)=\frac{1}{2m}\sum^{m}_{i=1}(f_{w,b}(x^{(i)})-y^{(i)})^{2}$
-
-yyy
-
 $$J(w,b) = \frac{1}{2m} \sum_{i=1}^{m} (f_{w,b}(x^{(i)}) - y^{(i)})^2$$
 
 where
@@ -27,9 +21,7 @@ where
 * These differences are summed over all the $m$ examples and divided by $2m$ to produce the cost, $J(w,b)$.
 
 **Objective**
-$$
-\stackrel{minimize}{_{w,b}} {J(w,b)}
-$$
+$$\underset{w,b}{\text{minimize}} J(w,b)$$
 
 ### Gradient Descent
 
