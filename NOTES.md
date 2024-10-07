@@ -22,7 +22,7 @@ where
 
 **Objective**
 
-$$\underset{w,b}{\text{minimize}\space} J(w,b)$$
+* $$\underset{w,b}{\text{minimize}\space} J(w,b)$$
 
 ### Gradient Descent
 
