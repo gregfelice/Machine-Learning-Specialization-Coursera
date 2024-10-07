@@ -118,7 +118,7 @@ $$
 * $f_{w,b}(x^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target value.
 * $f_{w,b}(x^{(i)}) = g(w \cdot x^{(i)} + b)$ where function g is the sigmoid function.
 
-The defining feature of this loss function is the fact that it uses two separate curves. One for the case when the target is zero or (𝑦=0) and another for when the target is one (𝑦=1). Combined, these curves provide the behavior useful for a loss function, namely, being zero when the prediction matches the target and rapidly increasing in value as the prediction differs from the target. 
+The defining feature of this loss function is the fact that it uses two separate curves. One for the case when the target is zero or $(𝑦=0)$ and another for when the target is one $(𝑦=1)$. Combined, these curves provide the behavior useful for a loss function, namely, being zero when the prediction matches the target and rapidly increasing in value as the prediction differs from the target. 
 
 Combined, the curves are similar to the quadratic curve of the squared error loss. Note, the x-axis is 𝑓𝐰,𝑏
 which is the output of a sigmoid. The sigmoid output is strictly between 0 and 1.
@@ -183,12 +183,14 @@ Including this term encourages gradient descent to minimize the size of the para
 
 ### Gradient Descent with Regularization
 The basic algorithm for running gradient descent does not change with regularization, it is:
-$$\begin{align*}
-&\text{repeat until convergence:} \; \lbrace \\
-&  \; \; \;w_j = w_j -  \alpha \frac{\partial J(\mathbf{w},b)}{\partial w_j} \tag{1}  \; & \text{for j := 0..n-1} \\ 
+
+$$\begin{aligned}
+&\text{repeat until convergence:} \; \{ \\
+&  \; \; \;w_j = w_j -  \alpha \frac{\partial J(\mathbf{w},b)}{\partial w_j}  \; & \text{for } j := 0..n-1 \\ 
 &  \; \; \;  \; \;b = b -  \alpha \frac{\partial J(\mathbf{w},b)}{\partial b} \\
-&\rbrace
-\end{align*}$$
+&\}
+\end{aligned}$$
+
 Where each iteration performs simultaneous updates on $w_j$ for all $j$.
 
 What changes with regularization is computing the gradients.
@@ -197,11 +199,10 @@ What changes with regularization is computing the gradients.
 
 The gradient calculation for both linear and logistic regression are nearly identical, differing only in computation of $f_{\mathbf{w}b}$.
 
-$$\begin{align*}
-\frac{\partial J(\mathbf{w},b)}{\partial w_j}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})x_{j}^{(i)}  +  \frac{\lambda}{m} w_j \\
-\frac{\partial J(\mathbf{w},b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})
-\end
-{align*}$$
+$$\begin{aligned}
+\frac{\partial J(\mathbf{w},b)}{\partial w_j}  &= \frac{1}{m} \sum_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})x_{j}^{(i)}  +  \frac{\lambda}{m} w_j \\
+\frac{\partial J(\mathbf{w},b)}{\partial b}  &= \frac{1}{m} \sum_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})
+\end{aligned}$$
 
 * m is the number of training examples in the data set      
 * $f_{\mathbf{w},b}(x^{(i)})$ is the model's prediction, while $y^{(i)}$ is the target
