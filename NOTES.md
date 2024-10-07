@@ -91,7 +91,7 @@ if $f_{w,b}(x) < 0.5$. predict y = 0
 
 Squared Error Cost
 
-$$J(w,b) = \frac {1}{2m}\sum^{m}_{i=1}(f_{w,b}(x^{(i)})-y^{(i)})^2$$
+$$J(w,b) = \frac{1}{2m} \sum_{i=1}^{m} (f_{w,b}(x^{(i)}) - y^{(i)})^2$$
 
 where
 
