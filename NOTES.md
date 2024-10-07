@@ -6,9 +6,7 @@
 ### Linear Regression Model
 
 **Model**
-$$
-f_{(w,b)}=wx+b
-$$
+$f_{(w,b)}=wx+b$
 
 **Parameters**
 $$
