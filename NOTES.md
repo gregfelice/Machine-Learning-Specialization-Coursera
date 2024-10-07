@@ -21,7 +21,7 @@ where
 * These differences are summed over all the $m$ examples and divided by $2m$ to produce the cost, $J(w,b)$.
 
 **Objective**
-$$\underset{w,b}{\text{minimize}} J(w,b)$$
+$$\underset{w,b}{\text{minimize}\space} J(w,b)$$
 
 ### Gradient Descent
 
