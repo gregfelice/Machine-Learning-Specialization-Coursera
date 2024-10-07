@@ -33,7 +33,7 @@ $$w=w-{\alpha}\frac{\partial J(w,b)}{\partial w}$$
 $$b=b-{\alpha}\frac{\partial J(w,b)}{\partial b}$$
 }
 
-where, parameters 𝑤, 𝑏 are updated simultaneously.
+where, parameters $𝑤, 𝑏$ are updated simultaneously.
 
 ### Cost With Multiple Variables
 
