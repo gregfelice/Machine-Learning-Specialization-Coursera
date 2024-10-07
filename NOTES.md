@@ -182,18 +182,6 @@ As was the case in linear regression above, the difference is the regularization
 Including this term encourages gradient descent to minimize the size of the parameters. Note, in this example, the parameter $b$ is not regularized. This is standard practice. 
 
 ### Gradient Descent with Regularization
-The basic algorithm for running gradient descent does not change with regularization, it is:
-
-$$\begin{aligned}
-&\text{repeat until convergence:} \; \{ \\
-&  \; \; \;w_j = w_j -  \alpha \frac{\partial J(\mathbf{w},b)}{\partial w_j}  \; & \text{for } j := 0..n-1 \\ 
-&  \; \; \;  \; \;b = b -  \alpha \frac{\partial J(\mathbf{w},b)}{\partial b} \\
-&\}
-\end{aligned}$$
-
-Where each iteration performs simultaneous updates on $w_j$ for all $j$.
-
-What changes with regularization is computing the gradients.
 
 **Computing the Gradient with regularization (both linear/logistic)**
 
