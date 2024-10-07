@@ -128,18 +128,21 @@ The loss function above can be rewritten to be easier to implement.
   
 This is a rather formidable-looking equation. It is less daunting when you consider $y^{(i)}$ can have only two values, 0 and 1. One can then consider the equation in two pieces:  
 when $ y^{(i)} = 0$, the left-hand term is eliminated:
+
 $$
-\begin{align}
-loss(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), 0) &= (-(0) \log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) - \left( 1 - 0\right) \log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) \\
-&= -\log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right)
-\end{align}
+\begin{aligned}
+\text{loss}(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), 0) &= (-(0) \log(f_{\mathbf{w},b}( \mathbf{x}^{(i)} )) - ( 1 - 0) \log ( 1 - f_{\mathbf{w},b}( \mathbf{x}^{(i)} ))) \\
+&= -\log ( 1 - f_{\mathbf{w},b}( \mathbf{x}^{(i)} ))
+\end{aligned}
 $$
+
 and when $ y^{(i)} = 1$, the right-hand term is eliminated:
+
 $$
-\begin{align}
-  loss(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), 1) &=  (-(1) \log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right) - \left( 1 - 1\right) \log \left( 1 - f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right)\\
-  &=  -\log\left(f_{\mathbf{w},b}\left( \mathbf{x}^{(i)} \right) \right)
-\end{align}
+\begin{aligned}
+  \text{loss}(f_{\mathbf{w},b}(\mathbf{x}^{(i)}), 1) &=  (-(1) \log(f_{\mathbf{w},b}( \mathbf{x}^{(i)} )) - ( 1 - 1) \log ( 1 - f_{\mathbf{w},b}( \mathbf{x}^{(i)} )))\\
+  &=  -\log(f_{\mathbf{w},b}( \mathbf{x}^{(i)} ))
+\end{aligned}
 $$
 
 With this new logistic loss function, a cost function can be produced that incorporates the loss from all the examples. 
