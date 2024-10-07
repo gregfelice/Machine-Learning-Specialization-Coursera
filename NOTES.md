@@ -90,17 +90,12 @@ if $f_{w,b}(x) < 0.5$. predict y = 0
 ### Logistic Loss
 
 Squared Error Cost
-$$
-J(w,b)=
-\frac {1}{2m}
-\sum^{m}_{i=1}
-(f_{w,b}(x^{(i)})-y^{(i)})^2
-$$
+
+$$J(w,b) = \frac {1}{2m}\sum^{m}_{i=1}(f_{w,b}(x^{(i)})-y^{(i)})^2$$
 
 where
-$$
-f_{w,b}(x^{(i)})= sigmoid(wx^{(i)} + b)
-$$
+
+$$f_{w,b}(x^{(i)}) = \text{sigmoid}(wx^{(i)} + b)$$
 
 **Logistic Loss Function**
 
