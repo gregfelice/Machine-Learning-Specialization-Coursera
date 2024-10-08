@@ -165,3 +165,4 @@ Gradient descent requires the derivative of the cost with respect to each parame
 
 A computation graph simplifies the computation of complex derivatives by breaking them into smaller steps. 
 
+
