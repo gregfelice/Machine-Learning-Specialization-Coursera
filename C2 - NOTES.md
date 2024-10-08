@@ -109,9 +109,11 @@ $$
 
 Now the cost is:
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 J(\mathbf{w},b) = -\frac{1}{m} \left[ \sum_{i=1}^{m} \sum_{j=1}^{N}  \mathbf{1}\{y^{(i)} = j\} \log \frac{e^{z^{(i)}_j}}{\sum_{k=1}^N e^{z^{(i)}_k} } \right] 
-\end{aligned}$$
+\end{aligned}
+$$
 
 Where $m$ is the number of examples, $N$ is the number of outputs. This is the average of all the losses.
 
