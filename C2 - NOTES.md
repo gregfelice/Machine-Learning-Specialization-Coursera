@@ -108,9 +108,10 @@ Where y is the target category for this example and $\mathbf{a}$ is the output o
  Note in (3) above, only the line that corresponds to the target contributes to the loss, other lines are zero. To write the cost equation we need an 'indicator function' that will be 1 when the index matches the target and zero otherwise. 
 
 $$\mathbf{1}\{y = n\} = \begin{cases}
-    1, & \text{if } y = n \\
-    0, & \text{otherwise}
-  \end{cases}$$
+1, & \text{if } y = n \\
+0, & \text{otherwise}
+\end{cases}
+$$
 
 Now the cost is:
 
