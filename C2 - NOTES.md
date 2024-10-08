@@ -72,21 +72,20 @@ $$a_j = \frac{e^{z_j}}{ \sum_{k=1}^{N}{e^{z_k} }} \tag{1}$$
 The output $\mathbf{a}$ is a vector of length N, so for softmax regression, you could also write:
 
 $$
-\begin{align}
+\begin{aligned}
 \mathbf{a}(x) =
 \begin{bmatrix}
 P(y = 1 | \mathbf{x}; \mathbf{w},b) \\
 \vdots \\
 P(y = N | \mathbf{x}; \mathbf{w},b)
 \end{bmatrix}
-=
-\frac{1}{ \sum_{k=1}^{N}{e^{z_k} }}
+\frac{1}{ \sum_{k=1}^{N} e^{z_k} }
 \begin{bmatrix}
 e^{z_1} \\
 \vdots \\
-e^{z_{N}} \\
-\end{bmatrix} \tag{2}
-\end{align}
+e^{z_{N}} 
+\end{bmatrix}
+\end{aligned}
 $$
 
 **Cost**
@@ -94,13 +93,11 @@ $$
 
 The loss function associated with Softmax, the cross-entropy loss, is:
 $$
-\begin{equation}
-  L(\mathbf{a},y)=\begin{cases}
-    -log(a_1), & \text{if $y=1$}.\\
-        &\vdots\\
-     -log(a_N), & \text{if $y=N$}
-  \end{cases} \tag{3}
-\end{equation}
+L(\mathbf{a},y) = \begin{cases}
+- \log(a_1), & \text{if } y = 1 \\
+\vdots \\
+- \log(a_N), & \text{if } y = N
+\end{cases} 
 $$
 
 Where y is the target category for this example and $\mathbf{a}$ is the output of a softmax function. In particular, the values in $\mathbf{a}$ are probabilities that sum to one.
@@ -116,9 +113,10 @@ $$\mathbf{1}\{y == n\} = =\begin{cases}
 
 Now the cost is:
 
-$$\begin{align}
-J(\mathbf{w},b) = -\frac{1}{m} \left[ \sum_{i=1}^{m} \sum_{j=1}^{N}  1\left\{y^{(i)} == j\right\} \log \frac{e^{z^{(i)}_j}}{\sum_{k=1}^N e^{z^{(i)}_k} }\right] \tag{4}
-\end{align}
+$$
+\begin{aligned}
+J(\mathbf{w},b) = -\frac{1}{m} \left[ \sum_{i=1}^{m} \sum_{j=1}^{N}  \mathbf{1}\{y^{(i)} = j\} \log \frac{e^{z^{(i)}_j}}{\sum_{k=1}^N e^{z^{(i)}_k} } \right] 
+\end{aligned}
 $$
 
 Where $m$ is the number of examples, $N$ is the number of outputs. This is the average of all the losses.
