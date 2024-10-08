@@ -8,7 +8,8 @@
 **Regression/Linear Model**
 
 The function implemented by a neuron with no activation is the same as in Course 1, linear regression:
-$$ f_{\mathbf{w},b}(x^{(i)}) = \mathbf{w}\cdot x^{(i)} + b$$
+
+$$ f_{\mathbf{w},b}(x^{(i)}) = \mathbf{w} \cdot x^{(i)} + b $$
 
 **Neuron with Sigmoid activation**
 
@@ -92,6 +93,7 @@ $$
 ![alt text](image-7.png)
 
 The loss function associated with Softmax, the cross-entropy loss, is:
+
 $$
 L(\mathbf{a},y) = \begin{cases}
 - \log(a_1), & \text{if } y = 1 \\
@@ -105,10 +107,9 @@ Where y is the target category for this example and $\mathbf{a}$ is the output o
  
  Note in (3) above, only the line that corresponds to the target contributes to the loss, other lines are zero. To write the cost equation we need an 'indicator function' that will be 1 when the index matches the target and zero otherwise. 
 
-
-$$\mathbf{1}\{y == n\} = =\begin{cases}
-    1, & \text{if $y==n$}.\\
-    0, & \text{otherwise}.
+$$\mathbf{1}\{y = n\} = \begin{cases}
+    1, & \text{if } y = n \\
+    0, & \text{otherwise}
   \end{cases}$$
 
 Now the cost is:
