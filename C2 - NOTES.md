@@ -94,13 +94,7 @@ $$
 
 The loss function associated with Softmax, the cross-entropy loss, is:
 
-$$
-L(\mathbf{a},y) = \begin{cases}
-- \log(a_1), & \text{if } y = 1 \\
-\vdots \\
-- \log(a_N), & \text{if } y = N
-\end{cases} 
-$$
+$$L(\mathbf{a},y) = \begin{cases} - \log(a_1), & \text{if } y = 1 \\ \vdots \\ - \log(a_N), & \text{if } y = N \end{cases}$$
 
 Where y is the target category for this example and $\mathbf{a}$ is the output of a softmax function. In particular, the values in $\mathbf{a}$ are probabilities that sum to one.
 >**Recall:** In this course, Loss is for one example while Cost covers all examples. 
